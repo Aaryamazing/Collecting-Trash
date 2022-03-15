@@ -23,7 +23,7 @@ function preload() {
   dangerImage = loadImage("danger.png")
   bg = loadImage("bg.png")
   
-  checkPoint = loadSound("checkPoint.mp3");
+  checkpoint = loadSound("checkpoint.mp3");
   die = loadSound("die.mp3");
 }
 
@@ -70,7 +70,7 @@ function draw() {
     spawnDanger();
 
     if(trashcan.isTouching(trashGroup)){
-      checkPoint.play()
+      checkpoint.play()
       trashGroup.destroyEach()
       score+=1
     }
